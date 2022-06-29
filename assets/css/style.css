@@ -983,8 +983,10 @@ a {
   width: 100%;
 }
 .burger-link {
+  color: rgb(255, 0, 0);
   display: inline-block;
-  font-size: 20px;
+  margin: 0px 10px;
+  font-size: 18px;
 }
 
 
