@@ -588,6 +588,7 @@ a {
 
 /* Quote */
 .quote {
+  position: relative;
   background: #57d9a6;
   padding: 90px 0px;
 }
@@ -936,59 +937,42 @@ a {
 
 /* BURGER */
 .burger-menu {
+  display: none;
+  text-align: center;
   flex: 1;
-  width: 100%;
-  height: 100%;
+}
 
-  font-size: 30px;
+.burger-menu img {
+  height: 32px;
+  width: 32px;
   cursor: pointer;
 }
 
-.burger-menu__icon {
-  margin: 5px auto;
-  background-color: #f6f6f8;
-  width: 20px;
-  height: 2px;
+.burger-menu svg {
+  cursor: pointer;
+  fill: white;
 }
 
-.burger-menu::after {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  background-color: #f6f6f8;
-  width: 30px;
-  height: 2px;
+.swiper-pagination {
+  position: static;
 }
-
-.burger-menu::before {
-  content: "";
-  display: block;
-  margin: 0 auto;
-  background-color: #f6f6f8;
-  width: 30px;
-  height: 2px;
-  margin-top: 41px;
+.swiper-pagination-bullet {
+  width: 18px;
+  height: 18px;
+  background-color: #222222;
 }
-
-.burger-popup {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  text-align: center;
-  position: fixed;
-  top: 0px;
-  left: 0px;
-  background-color: #18182b;
-  height: 10px;
-  width: 100%;
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  display: none;
 }
-.burger-link {
-  color: rgb(255, 0, 0);
-  display: inline-block;
-  margin: 0px 10px;
-  font-size: 18px;
+.swiper-button-next {
+  background: no-repeat;
+  background-image: url(../images/next-button.svg);
 }
-
+.swiper-button-prev {
+  background: no-repeat;
+  background-image: url(../images/prev-button.svg);
+}
 
 @media screen and (max-width: 1280px) {
   .courses__images,
@@ -1077,7 +1061,9 @@ a {
   .container {
     max-width: 800px;
   }
-
+  .swiper {
+    position: static;
+  }
   .main {
     flex-direction: column;
   }
@@ -1184,6 +1170,13 @@ a {
 }
 
 @media screen and (max-width: 800px) {
+  .burger-menu {
+    display: block;
+  }
+  .swiper-button-prev,
+  .swiper-button-next {
+    display: none;
+  }
   .container {
     max-width: 576px;
   }
@@ -1193,7 +1186,25 @@ a {
   }
 
   .menu {
-    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 100px;
+    background-color: #439e7a;
+    top: -100px;
+    transition: top 0.2s linear;
+
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
+  .menu .menu__link {
+    margin: 0px auto;
+  }
+  .menu.active {
+    top: 0px;
   }
 
   .main__left {

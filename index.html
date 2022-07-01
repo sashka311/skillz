@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+    />
     <link rel="stylesheet" href="assets/css/style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -20,13 +24,27 @@
   </head>
 
   <body>
-      
     <div class="first">
       <div class="ad">
         One week only—50% off all courses with code 50OFF at checkout
       </div>
       <nav>
         <div class="nav__row">
+          <div class="burger-menu">
+            <svg
+              id="burger-icon"
+              xmlns="http://www.w3.org/2000/svg"
+              x="0px"
+              y="0px"
+              width="30"
+              height="30"
+              viewBox="0 0 30 30"
+            >
+              <path
+                d="M 3 7 A 1.0001 1.0001 0 1 0 3 9 L 27 9 A 1.0001 1.0001 0 1 0 27 7 L 3 7 z M 3 14 A 1.0001 1.0001 0 1 0 3 16 L 27 16 A 1.0001 1.0001 0 1 0 27 14 L 3 14 z M 3 21 A 1.0001 1.0001 0 1 0 3 23 L 27 23 A 1.0001 1.0001 0 1 0 27 21 L 3 21 z"
+              ></path>
+            </svg>
+          </div>
           <div class="skillz">
             <img class="nav__logo" src="assets/images/logo.png" alt="" />
             Skillz
@@ -203,24 +221,124 @@
 
     <div id="blog" class="quote">
       <div class="container">
-        <div class="quote__stars">
-          <img class="quote__stars-star" src="assets/images/star.png" alt="#" />
-          <img class="quote__stars-star" src="assets/images/star.png" alt="#" />
-          <img class="quote__stars-star" src="assets/images/star.png" alt="#" />
-          <img class="quote__stars-star" src="assets/images/star.png" alt="#" />
-          <img class="quote__stars-star" src="assets/images/star.png" alt="#" />
+        
+        <div class="swiper">
+          <button class="swiper-button-prev"></button>
+        <button class="swiper-button-next"></button>
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="quote__stars">
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+              </div>
+              <div class="quote__subtitle">
+                “Kate's courses are a game changer. She's thorough, organized,
+                and explains things in a no-nonsense way that makes it easy for
+                anyone—beginners to experts—to learn something from her courses
+                and take their game to the next level.”
+              </div>
+              <div class="quote__author">James Brown, Influencer</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote__stars">
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+              </div>
+              <div class="quote__subtitle">
+                “Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sint,
+                eius, ipsum dolor sit, amet consectetur adipisicing elit. Sint,
+                eius”
+              </div>
+              <div class="quote__author">John White, Author</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="quote__stars">
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+                <img
+                  class="quote__stars-star"
+                  src="assets/images/star.png"
+                  alt="#"
+                />
+              </div>
+              <div class="quote__subtitle">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Soluta
+                dolor atque praesentium ipsam. Debitis accusamus quis quidem
+                autem repellendus nihil!
+              </div>
+              <div class="quote__author">James McDonald, IT-specialist</div>
+            </div>
+          </div>
+          <!-- <div class="quote__slidebar">
+            <div class="slidebar-active"></div>
+            <div class="slidebar-disabled"></div>
+          </div> -->
         </div>
-        <div class="quote__subtitle">
-          “Kate's courses are a game changer. She's thorough, organized, and
-          explains things in a no-nonsense way that makes it easy for
-          anyone—beginners to experts—to learn something from her courses and
-          take their game to the next level.”
-        </div>
-        <div class="quote__author">James Brown, Influencer</div>
-        <div class="quote__slidebar">
-          <div class="slidebar-active"></div>
-          <div class="slidebar-disabled"></div>
-        </div>
+        <div class="swiper-pagination"></div>
       </div>
     </div>
 
@@ -384,6 +502,7 @@
         </div>
       </div>
     </div>
-    <script defer src="assets/js/main.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
   </body>
 </html>
